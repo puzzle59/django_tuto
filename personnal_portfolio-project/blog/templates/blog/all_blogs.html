@@ -1,3 +1,7 @@
 <h1> HEy, tu viens plus aux soirèes </h1>
-{{ Blog.title}}
-{{ Blog.description }}
+{% for blog in blogs %}
+{{ blog.title}}
+<h3> {{blog.date}}</h3>
+{{ blog.description}}
+
+{% endfor %}
