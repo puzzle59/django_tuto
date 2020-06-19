@@ -1,11 +1,15 @@
-<h1> Mon blog , mon expérience. Ta curiosité tes expériences</h1>
+{%extends 'portfolio/base.html'%}
+{%block content%}
+
+<h1> Mon blog , mon expérience. Ta curiosité tes exigences</h1>
 <br>
 <h2>Marvin a écrit {{ blogs.count }}  article{{ blogs.count|pluralize}}</h2>
 
 {% for blog in blogs %}
 <a href="{% url 'blog:detail' blog.id %}">{{ blog.title}}</a>
 <h3> {{blog.date| date:'Y d M'}}</h3>
-{{ blog.description| truncatechars:10}}
+{{ blog.description| truncatechars:100}}
 <br> <br> <br>
 {% endfor %}
 <h5>
+{%endblock%}

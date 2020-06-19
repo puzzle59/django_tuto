@@ -1,5 +1,9 @@
-{{ blog.title }} <br>
+ {% extends 'portfolio/base.html'%}
+ {%block content%}
+ {{ blog.title }} <br>
 
 {{ blog.date }} <br>
 
 {{ blog.description|safe}}
+
+{% endblock%}
